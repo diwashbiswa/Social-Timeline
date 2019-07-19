@@ -12,15 +12,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var myTableView: UITableView!
     
-    var listofNames = ["Isabelle", "Aja", "Diwash", "Christy", "Max"]
-    var listofTasks = ["Physics Homeworks", "Exercise", "Folding laundry", "Robotics Club", "Attend CC party"]
-    var listOfCats = ["Academic", "Health", "Other", "Social", "Event"]
+    var listofNames = ["Isabelle", "Aja", "Diwash", "Christy", "Max", "Aja", "Isabelle", "Max"]
+    var listofTasks = ["Physics Homeworks", "Exercise", "Folding laundry", "Robotics Club", "Attend CC party", "Programming Assignment 1", "Psychology Essay", "Read Lecture Notes"]
+    var listOfCats = ["Academic", "Health", "Other", "Social", "Event", "Academic", "Academic", "Academic"]
     
-    var listOfImages: [UIImage] = [#imageLiteral(resourceName: "isabelle"), #imageLiteral(resourceName: "aja"), #imageLiteral(resourceName: "diwash"), #imageLiteral(resourceName: "christy"), #imageLiteral(resourceName: "max")]
+    var listOfImages: [UIImage] = [#imageLiteral(resourceName: "isabelle"), #imageLiteral(resourceName: "aja"), #imageLiteral(resourceName: "diwash"), #imageLiteral(resourceName: "christy"), #imageLiteral(resourceName: "max"), #imageLiteral(resourceName: "aja"), #imageLiteral(resourceName: "isabelle"), #imageLiteral(resourceName: "max")]
     
     //returns the number of rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 8
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -34,7 +34,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cellnew.likeButton?.frame = CGRect(x: 200, y: 225, width: 30, height: 30)
         cellnew.commentButton?.frame = CGRect(x: 392, y: 225, width: 30, height: 30)
         
-        cellnew.taskLabel?.text = "\(listofNames[indexPath.row]) completed \(listOfCats[indexPath.row]) task : \(listofTasks[indexPath.row])"
+        cellnew.taskLabel?.text = "\(listofNames[indexPath.row]) completed \(listOfCats[indexPath.row]) task: \(listofTasks[indexPath.row])"
         
         
         //resize imageview
